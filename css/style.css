@@ -1,0 +1,405 @@
+* {
+    box-sizing: border-box;
+}
+
+html body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* /* --------------------- overlap menu css --------------------- * / */
+
+.menu-part-1 {
+    width: 33.3vw;
+    height: 100%;
+    background: #000000;
+    display: inline-block;  
+}
+
+.menu-part-2 {
+    width: 33.3vw;
+    height: 100%;
+    background: #333333;
+    display: inline-block;   
+}
+
+.menu-part-3 {
+    width: 33.3vw;
+    height: 100%;
+    background: #666666;
+    display: inline-block;
+}
+
+.menu > a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    position: relative;
+    margin:0;
+    left: 60px;
+    top: 50vh;
+}
+
+#overlay-menu {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#menu-icon-close {
+    background: url(../assets/SVG/menu_close.svg) no-repeat;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin: 30px 30px 0 0;
+    position: absolute;
+    right: 0px;
+    border: none;
+}
+
+/* /* --------------------- intro section css --------------------- * / */
+
+header {
+    /* background: black; */
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+section.intro {
+    width: 100%;
+    height: 300px;
+    background:#F6F7F8;
+    color: black;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title {
+    width: 1100px;
+    font-size: 50px;
+    line-height: 95%;
+    letter-spacing: 1px;
+    word-spacing: -2px;
+    margin: -40px auto 50px 60px;
+
+}
+
+#overall-intro {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: 50;
+    word-spacing: 0.2px;
+    letter-spacing: 0.2px;
+    color: #bcbec0;
+    width: 350px;
+    font-size: 18px;
+    margin: 0 auto 0px 60px;
+    animation-delay: 6.5s;
+}
+
+
+
+/* /* --------------------- timeline section css --------------------- * / */
+
+.timeline {
+    position: relative;
+    background-color: #D3DBE2;
+    text-align: center;
+    height: 2850px;
+}
+
+.timeline-vl {
+    left: 50%;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    border-left: 0.5px solid white;
+    float: left;
+}
+
+.timeline-title {
+    margin:0;
+    position: relative;
+    top: 60px;
+    font-size: 48px;
+    color:white;
+    opacity:0.5;
+}
+
+.timeline-container {
+    margin-top: 120px;
+}
+
+.timeline-right {
+    text-align: left;
+}
+
+.timeline-left {
+    text-align: right;
+    line-height: 20px;
+}
+
+.year {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 20px;    
+    margin: 0;
+    position: absolute;
+}
+
+.year-right {
+    position: absolute;
+    left: 55%;
+}
+
+.year-left {
+    position: absolute;
+    right: 55%;
+}
+
+.horizontal-dash {
+    position: absolute;
+    width: 1%;
+    left: 49.55%;
+    border-top: 1px solid white;
+}
+
+#small-dash {
+    width: 0.8%;
+    left: 50%;
+    border-top: 1px solid #a7a9ac;
+}
+
+.bw-image {
+    width: 350px;
+    height: 220px;
+    margin-bottom: 10px;
+}
+
+.timeline-list > div {
+    display: inline-block;
+    width: 350px;
+    height: 100px;
+}
+
+.timeline-left {
+    position: relative;
+    right: 22%;
+}
+
+.timeline-right {
+    position: relative;
+    left: 22%;
+}
+
+.timeline-list {
+    display: block;
+}
+
+.timeline-list p {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 14px;
+    color: #a1a1a1;
+    margin: 1px 0px;
+}
+
+.timeline-list h3 {
+    margin: 1px 0px;
+    color: #666666;
+    font-size: 22px;
+}
+
+#black-title {
+    font-size: 22px;
+    color: black;
+}
+
+#morespace {
+    margin-top: 40px;
+}
+
+#lessspace {
+    margin-top: -100px;
+}
+
+
+/* /* --------------------- gallery section css --------------------- * / */
+
+.gallery {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 200px;
+}
+
+.wrapper {
+    width: 16.667vw;
+    height: 220px;
+    /* cursor: pointer; */
+  }
+
+.gallery-image {
+    width: 16.667vw;
+    height: 220px;
+    transition: .1s transform;
+    transform: translateZ(1);
+}
+
+.wrapper :hover {
+    opacity:0.8;
+  }
+
+  
+.image-1 {
+    background-image: url("../assets/img/item1.jpg"); background-size: cover;  
+}
+
+.image-2 {
+    background-image: url("../assets/img/item2.jpg");
+    background-size: cover;
+}
+
+.image-3 {
+    background-image: url("../assets/img/item3.jpg");
+    background-size: cover;
+    background-position-x: center;
+}
+
+.image-4 {
+    background-image: url("../assets/img/item4.jpg");
+    background-size: cover;
+    background-position-x: center;
+}
+
+.image-5 {
+    background-image: url("../assets/img/item5.jpg");
+    background-size: cover;
+}
+
+.image-6 {
+    background-image: url("../assets/img/item6.jpg");
+    background-size: cover;
+    background-position-y: center;
+}
+
+.image-7 {
+    background-image: url("../assets/img/item7.jpg");
+    background-size: cover;
+}
+
+.image-8 {
+    background-image: url("../assets/img/item8.jpg");
+    background-size: cover;
+    background-position-x: center;
+}
+
+.image-9 {
+    background-image: url("../assets/img/item9.jpg");
+    background-size: cover;
+}
+
+.image-10 {
+    background-image: url("../assets/img/item10.jpg");
+    background-size: cover;
+}
+
+.image-11 {
+    background-image: url("../assets/img/item11.jpg");
+    background-size: cover;
+}
+
+.image-19 {
+    background-image: url("../assets/img/throwaway1.jpg");
+    background-size: cover;
+}
+
+.image-20 {
+    background-image: url("../assets/img/throwaway2.jpg");
+    background-size: cover;
+}
+
+.image-21 {
+    background-image: url("../assets/img/throwaway3.jpg");
+    background-size: cover;
+}
+
+.image-22 {
+    background-image: url("../assets/img/throwaway4.jpg");
+    background-size: cover;
+}
+
+.image-23 {
+    background-image: url("../assets/img/throwaway5.jpg");
+    background-size: cover;
+}
+
+.image-24 {
+    background-image: url("../assets/img/throwaway6.jpg");
+    background-size: cover;
+}
+
+.image-25 {
+    background-image: url("../assets/img/throwaway7.jpg");
+    background-size: cover;
+}
+
+.image-26 {
+    background-image: url("../assets/img/throwaway8.jpg");
+    background-size: cover;
+}
+
+.image-27 {
+    background-image: url("../assets/img/throwaway9.jpg");
+    background-size: cover;
+}
+
+.image-28 {
+    background-image: url("../assets/img/throwaway10.jpg");
+    background-size: cover;
+}
+
+.image-29 {
+    background-image: url("../assets/img/throwaway11.jpg");
+    background-size: cover;
+}
+
+.image-30 {
+    background-image: url("../assets/img/throwaway12.jpg");
+    background-size: cover;
+}
+/* /* --------------------- footer css --------------------- * / */
+
+footer {
+    width: 100vw;
+    height: 30px;
+    background-color: black;
+    margin: 0;
+}
+
+footer > p {
+    margin: 0;
+    padding-top: 8px;
+    padding-left: 60px;
+    color: #666666;
+    font-size: 12px;
+    /* word-spacing: 30px; */
+    letter-spacing: 4px;
+}
